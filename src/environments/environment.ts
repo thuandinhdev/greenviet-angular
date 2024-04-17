@@ -1,6 +1,6 @@
 export let environment: { apiUrl: string; production: boolean };
 environment = {
 	production: false,
-	apiUrl: 'http://cuor.tech/public'
+	apiUrl: 'https://thuandinh.com/public'
 	// apiUrl: 'http://chetsapp.de:8899'
 };

@@ -91,4 +91,7 @@ export class LoginComponent implements OnInit {
 		this.loginForm.patchValue({ password: password });
 	}
 
+    microsoftLogin(){
+        window.location.href = "https://thuandinh.com/public/auth/redirect";
+    }
 }

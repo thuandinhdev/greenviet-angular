@@ -34,18 +34,18 @@ import { HomeComponent } from './pages/home/home.component';
 import { PmDashboardWidgetsComponent } from './components/pm-dashboard-widgets/pm-dashboard-widgets.component';
 import { PmDashboardChartsComponent } from './components/pm-dashboard-charts/pm-dashboard-charts.component';
 import { PmDashboardTasksComponent } from './components/pm-dashboard-tasks/pm-dashboard-tasks.component';
-import { PmDashboardDefectsComponent } from './components/pm-dashboard-defects/pm-dashboard-defects.component';
-import { PmDashboardIncidentsComponent } from './components/pm-dashboard-incidents/pm-dashboard-incidents.component';
-import { PmDashboardMeetingsComponent } from './components/pm-dashboard-meetings/pm-dashboard-meetings.component';
-import { PmDashboardActivityComponent } from './components/pm-dashboard-activity/pm-dashboard-activity.component';
-import { PmDashboardAnnouncementsComponent } from './components/pm-dashboard-announcements/pm-dashboard-announcements.component';
+// import { PmDashboardDefectsComponent } from './components/pm-dashboard-defects/pm-dashboard-defects.component';
+// import { PmDashboardIncidentsComponent } from './components/pm-dashboard-incidents/pm-dashboard-incidents.component';
+// import { PmDashboardMeetingsComponent } from './components/pm-dashboard-meetings/pm-dashboard-meetings.component';
+// import { PmDashboardActivityComponent } from './components/pm-dashboard-activity/pm-dashboard-activity.component';
+// import { PmDashboardAnnouncementsComponent } from './components/pm-dashboard-announcements/pm-dashboard-announcements.component';
 import { PmDashboardProjectsComponent } from './components/pm-dashboard-projects/pm-dashboard-projects.component';
-import { PmDashboardTodosComponent } from './components/pm-dashboard-todos/pm-dashboard-todos.component';
+// import { PmDashboardTodosComponent } from './components/pm-dashboard-todos/pm-dashboard-todos.component';
 import { PmDashboardChart1Component } from './components/pm-dashboard-chart1/pm-dashboard-chart1.component';
 import { PmDashboardChart2Component } from './components/pm-dashboard-chart2/pm-dashboard-chart2.component';
-import { DashboardSettingsComponent } from './components/dashboard-settings/dashboard-settings.component';
-import { PmDashboardInvoicesComponent } from './components/pm-dashboard-invoices/pm-dashboard-invoices.component';
-import { PmDashboardEstimatesComponent } from './components/pm-dashboard-estimates/pm-dashboard-estimates.component';
+// import { DashboardSettingsComponent } from './components/dashboard-settings/dashboard-settings.component';
+// import { PmDashboardInvoicesComponent } from './components/pm-dashboard-invoices/pm-dashboard-invoices.component';
+// import { PmDashboardEstimatesComponent } from './components/pm-dashboard-estimates/pm-dashboard-estimates.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 	suppressScrollX: true
@@ -57,18 +57,18 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 		PmDashboardWidgetsComponent,
 		PmDashboardChartsComponent,
 		PmDashboardTasksComponent,
-		PmDashboardDefectsComponent,
-		PmDashboardIncidentsComponent,
-		PmDashboardMeetingsComponent,
-		PmDashboardActivityComponent,
-		PmDashboardAnnouncementsComponent,
+		// PmDashboardDefectsComponent,
+		// PmDashboardIncidentsComponent,
+		// PmDashboardMeetingsComponent,
+		// PmDashboardActivityComponent,
+		// PmDashboardAnnouncementsComponent,
 		PmDashboardProjectsComponent,
-		PmDashboardTodosComponent,
+		// PmDashboardTodosComponent,
 		PmDashboardChart1Component,
 		PmDashboardChart2Component,
-		DashboardSettingsComponent,
-		PmDashboardInvoicesComponent,
-		PmDashboardEstimatesComponent
+		// DashboardSettingsComponent,
+		// PmDashboardInvoicesComponent,
+		// PmDashboardEstimatesComponent
 	],
 	imports: [
 		CommonModule,

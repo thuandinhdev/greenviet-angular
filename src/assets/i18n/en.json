@@ -128,7 +128,7 @@
 	},
 	"appointments": {
 		"budges": {
-			"title1": "Booked Slots", 
+			"title1": "Booked Slots",
 			"title2": "Appointment Recurrence"
 		},
 		"columns": {
@@ -184,7 +184,7 @@
 				"placeholder5": "Location",
 				"placeholder6": "Attendees",
 				"placeholder7": "-- Select Status --",
-				"placeholder8": "Search For Month", 
+				"placeholder8": "Search For Month",
 				"placeholder9": "-- Select Provider --",
 				"placeholder10": "Enter Recurring Occurrences"
 			}
@@ -2415,6 +2415,7 @@
 				"project_name": "Project Name",
 				"start_date": "Start Date",
 				"status": "Status",
+				"input_cost": "Input Cost",
 				"version": "Version"
 			},
 			"placeholders": {

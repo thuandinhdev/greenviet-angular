@@ -11,7 +11,7 @@
 							<div class="form-body">
 								<h4 class="form-section"><i class="ft-zap" aria-hidden="true"></i>{{'projects.headings.head1' | translate}}</h4>
 								<div class="row">
-									<div class="col-md-8">
+									<div class="col-md-12">
 										<div class="form-group">
 											<label for="project_name">{{'projects.create.fields.project_name' | translate }}&nbsp;<span class="text-danger">*</span></label>
 											<input type="text" class="form-control" formControlName="project_name" id="project_name" placeholder="{{'projects.create.placeholders.placeholder1' | translate }}" [ngClass]="{ 'is-invalid': isFormSubmitted && projectControl.project_name.errors }" />
@@ -21,7 +21,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-md-4">
+									<!-- <div class="col-md-4">
 										<div class="form-group">
 											<label for="project_version">{{'projects.create.fields.version' | translate }}&nbsp;<span class="text-danger">*</span></label>
 											<input type="text" class="form-control" placeholder="{{'projects.create.placeholders.placeholder2' | translate }}" formControlName="project_version" id="project_version" [ngClass]="{ 'is-invalid': isFormSubmitted && projectControl.project_version.errors }" />
@@ -31,7 +31,7 @@
 											</div>
 											<span class="badge badge-secondary">{{'projects.budges.version' | translate }}: 1.0, 1.1, 1.2</span>
 										</div>
-									</div>
+									</div> -->
 									<div class="col-md-6" *ngIf="!loginUser.is_client">
 										<div class="form-group">
 											<label for="client_id">{{'projects.create.fields.client_name' | translate }}</label>
@@ -66,7 +66,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-md-12">
+									<div class="col-md-6">
 										<div class="form-group">
 											<label for="assign_members">{{'projects.create.fields.assigned_To' | translate }}</label>
 											<ng-select [searchable]="true"
@@ -82,7 +82,7 @@
 											</ng-select>
 										</div>
 									</div>
-									<div class="col-md-6">
+									<!-- <div class="col-md-6">
 										<div class="form-group" [ngClass]="{ 'is-invalid': isFormSubmitted && projectControl.demo_url.errors }">
 											<label for="demo_url">{{'projects.create.fields.demo_URL' | translate }}</label>
 											<input type="text" class="form-control" placeholder="https://example.com" formControlName="demo_url" id="demo_url" [ngClass]="{ 'is-invalid': isFormSubmitted && projectControl.demo_url.errors }"/>
@@ -90,7 +90,7 @@
 												<div *ngIf="projectControl.demo_url.errors.pattern">{{'projects.create.error_messages.message8' | translate }}</div>
 											</div>
 										</div>
-									</div>
+									</div> -->
 									<div class="col-md-6">
 										<div class="form-group" [ngClass]="{ 'is-invalid': isFormSubmitted && projectControl.status.errors }">
 											<label for="status">{{'projects.create.fields.status' | translate }}&nbsp;<span class="text-danger">*</span> </label>
@@ -108,7 +108,30 @@
 											</div>
 										</div>
 									</div>
+                                    <div class="col-md-12" *ngIf="createProjectForm.get('billing_type').value == 1 || createProjectForm.get('billing_type').value == 2 || createProjectForm.get('billing_type').value == null">
+										<div class="form-group fixed_rate">
+											<!-- <label for="price_rate" *ngIf="createProjectForm.get('billing_type').value == 1 || createProjectForm.get('billing_type').value == null">{{'projects.create.fields.fixed_price' | translate }}</label>
+											<label for="price_rate" *ngIf="createProjectForm.get('billing_type').value == 2">{{'projects.create.fields.hourly_rate' | translate }}</label> -->
+                                            <label for="price_rate">{{'projects.create.fields.input_cost' | translate }}</label>
+											<input type="text" class="form-control" placeholder="{{'projects.create.placeholders.placeholder10' | translate }}" formControlName="price_rate" id="price_rate" [ngClass]="{ 'is-invalid': isFormSubmitted && projectControl.price_rate.errors }" />
+											<div *ngIf="isFormSubmitted && projectControl.price_rate.errors" class="invalid-feedback">
+												<div *ngIf="projectControl.price_rate.errors.minlength">{{'projects.create.error_messages.message12' | translate }}</div>
+												<div *ngIf="projectControl.price_rate.errors.pattern">{{'projects.create.error_messages.message13' | translate }}</div>
+											</div>
+										</div>
+									</div>
 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="col-md-6">
+				<div class="card">
+					<div class="card-header">&nbsp;</div>
+					<div class="card-body">
+						<div class="px-3">
+							<div class="form-body">
 								<h4 class="form-section"><i class="ft-calendar"></i> {{'projects.headings.head2' | translate}}</h4>
 								<div class="row">
 									<div class="col-md-6">
@@ -136,12 +159,13 @@
 										</div>
 									</div>
 								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+			<!-- <div class="col-md-6">
 				<div class="card">
 					<div class="card-header">&nbsp;</div>
 					<div class="card-body">
@@ -163,7 +187,7 @@
 											</ng-select>
 										</div>
 									</div>
-									<div class="col-md-6" *ngIf="createProjectForm.get('billing_type').value == 1 || createProjectForm.get('billing_type').value == 2 || createProjectForm.get('billing_type').value == null">
+									<div class="col-md-12" *ngIf="createProjectForm.get('billing_type').value == 1 || createProjectForm.get('billing_type').value == 2 || createProjectForm.get('billing_type').value == null">
 										<div class="form-group fixed_rate">
 											<label for="price_rate" *ngIf="createProjectForm.get('billing_type').value == 1 || createProjectForm.get('billing_type').value == null">{{'projects.create.fields.fixed_price' | translate }}</label>
 											<label for="price_rate" *ngIf="createProjectForm.get('billing_type').value == 2">{{'projects.create.fields.hourly_rate' | translate }}</label>
@@ -220,7 +244,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="col-md-12" *ngIf="customFields.length > 0">
 				<div class="card">
 					<div class="card-body">
@@ -252,7 +276,7 @@
 									<div class="col-md-12">
 										<label for="description">{{'projects.create.fields.description' | translate }}</label>
 										<app-ngx-editor [config]="editorConfig"
-											[placeholder]="'projects.create.placeholders.placeholder11' | translate" 
+											[placeholder]="'projects.create.placeholders.placeholder11' | translate"
 											formControlName="description"
 											id="description">
 										</app-ngx-editor>
