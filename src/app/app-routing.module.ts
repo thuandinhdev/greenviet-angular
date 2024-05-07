@@ -586,6 +586,23 @@ const routes: Routes = [
 					}
 				},
 				loadChildren: () => import('./modules/sales/payments/payments.module').then(m => m.PaymentsModule)
+			},
+            {
+				path: 'marketings',
+				canLoad: [NgxPermissionsGuard],
+				data: {
+					title: "breadcrumbs.marketings.title",
+					breadcrumbs: {
+						text: "breadcrumbs.marketings.text",
+						icon: "fa fa-bullhorn",
+						show: false,
+						isHome: false
+					},
+					permissions: {
+						only: ['admin', 'super_admin', 'marketings_view']
+					}
+				},
+				loadChildren: () => import('./modules/pm/marketing/marketing.module').then(m => m.MarketingModule)
 			}
 		]
 	},

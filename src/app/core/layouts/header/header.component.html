@@ -9,12 +9,12 @@
 					<li class="nav-item">
 						<a id="navbar-fullscreen" href="javascript:void(0);" class="nav-link" appToggleFullscreen tooltip="{{'common.fullscreen' | translate }}"><i class="ft-maximize font-m-3 blue-grey darker-4"></i></a>
 					</li>
-					<li class="nav-item">
+					<!-- <li class="nav-item">
 						<a [routerLink]="'/todos'" class="nav-link" tooltip="{{'todos.title' | translate }}"><i class="ft-check-square font-m-3 blue-grey darker-4"></i></a>
 					</li>
 					<li class="nav-item" *ngxPermissionsOnly="['admin', 'super_admin', 'calendar_view']">
 						<a [routerLink]="'/calendar'" class="nav-link" tooltip="{{'calendar.title' | translate }}"><i class="ft-calendar font-m-3 blue-grey darker-4"></i></a>
-					</li>
+					</li> -->
 					<!-- <li role="menuitem" dropdown #dropdown1="bs-dropdown" [autoClose]="true" *ngxPermissionsOnly="['mailbox_view']">
 						<a dropdownToggle class="nav-link" (click)="false" tooltip="{{'mailbox.title' | translate }}">
 							<i class="ft-mail font-m-3 blue-grey darker-4"></i>
@@ -128,18 +128,18 @@
 									</ng-template>
 								</p>
 							</div>
-							<a class="dropdown-item py-1" [routerLink]="'/settings'" *ngxPermissionsOnly="['admin', 'super_admin', 'settings_view']">
+							<!-- <a class="dropdown-item py-1" [routerLink]="'/settings'" *ngxPermissionsOnly="['admin', 'super_admin', 'settings_view']">
 								<i class="ft-settings mr-2"></i>
 								<span>{{ 'settings.title' | translate }}</span>
-							</a>
+							</a> -->
 							<a class="dropdown-item py-1" [routerLink]="['/users/profile', loginUser.id]">
 								<i class="ft-edit mr-2"></i>
 								<span>{{ 'header.profile' | translate }}</span>
 							</a>
-							<a class="dropdown-item py-1" [routerLink]="'/mailbox'" *ngxPermissionsOnly="['admin', 'super_admin', 'mailbox_view']">
+							<!-- <a class="dropdown-item py-1" [routerLink]="'/mailbox'" *ngxPermissionsOnly="['admin', 'super_admin', 'mailbox_view']">
 								<i class="ft-mail mr-2"></i>
 								<span>{{ 'header.inbox' | translate }}</span>
-							</a>
+							</a> -->
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item" (click)="logout()">
 								<i class="ft-power mr-2"></i>

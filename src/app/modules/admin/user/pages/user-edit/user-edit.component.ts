@@ -219,7 +219,7 @@ export class UserEditComponent implements OnInit {
 			can_view_all_users: [this.user.can_view_all_users],
 			avatar: [this.user.avatar],
 			assign_permission: ['all'],
-			department_roles: [this.departmentsObj, Validators.required],
+			department_roles: [this.departmentsObj[0], Validators.required],
 			permission: ['']
 		});
 

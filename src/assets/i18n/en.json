@@ -391,6 +391,10 @@
 		"users": {
 			"text": "Users",
 			"title": "Users"
+		},
+        "marketings": {
+			"text": "Marketings",
+			"title": "Marketings"
 		}
 	},
 	"calendar": {
@@ -4007,5 +4011,49 @@
 			"message2": "Time must be greater than 1 minutes.",
 			"message3": "Time must be less than 12 hours."
 		}
+	},
+    "todos": {
+		"create": {
+			"error_messages": {
+				"message1": "Please enter a valid description.",
+				"message2": "Description can be max 5 characters long.",
+				"message3": "Description can be max 255 characters long.",
+				"message4": "Please select a valid marketing status.",
+				"message5": "Please select a valid due date."
+			},
+			"fields": {
+				"description": "Description",
+				"due_date": "Due Date",
+				"status": "Status"
+			},
+			"placeholders": {
+				"placeholder1": "Enter Description",
+				"placeholder2": "-- Select Status --",
+				"placeholder3": "Select Due Date"
+			}
+		},
+		"inline_edit": {
+			"description": "Description",
+			"due_date": "Due Date"
+		},
+		"messages": {
+			"create": "Marketing created successfully.",
+			"delete": "Marketing deleted successfully.",
+			"status": "Status updated successfully.",
+			"update": "Marketing updated successfully."
+		},
+		"status": [
+			{
+				"class": "open",
+				"id": 1,
+				"label": "Open"
+			},
+			{
+				"class": "completed",
+				"id": 2,
+				"label": "Completed"
+			}
+		],
+		"title": "Marketing"
 	}
 }

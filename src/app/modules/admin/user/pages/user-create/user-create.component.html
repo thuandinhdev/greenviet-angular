@@ -41,7 +41,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-md-6">
+									<!-- <div class="col-md-6">
 										<div class="form-group">
 											<label for="password">{{'users.create.fields.password' | translate}}&nbsp;<span class="text-danger">*</span></label>
 											<input type="password" class="form-control" formControlName="password" id="password" placeholder="{{'users.create.placeholders.placeholder4' | translate}}" autocomplete="off" [ngClass]="{ 'is-invalid': isFormSubmitted && userControl.password.errors }" />
@@ -60,7 +60,7 @@
 												<div *ngIf="userControl.password_confirmation.errors.mustMatch">{{'users.create.error_messages.message10' | translate}}</div>
 											</div>
 										</div>
-									</div>
+									</div> -->
 								</div>
 
 								<h4 class="form-section"><i class="ft-file-text"></i> {{'users.headings.head2' | translate}}</h4>
@@ -88,7 +88,7 @@
 												bindLabel="name"
 												bindValue="id"
 												groupBy="roles"
-												[multiple]="true"
+												[multiple]="false"
 												[selectableGroup]="false"
 												(change)="departmentRolesChange($event)"
 												formControlName="department_roles"
@@ -101,7 +101,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-md-12">
+									<!-- <div class="col-md-12">
 										<label class="checkbox-container">
 											<input type="checkbox" class="form-control" formControlName="is_super_admin" id="is_super_admin" />{{'users.create.fields.is_departmenthead' | translate}}
 											<span class="checkbox-checkmark"></span>
@@ -128,7 +128,7 @@
 											</label>
 											<div *ngIf="isPermissionRequired" class="invalid-feedback d-block">{{'users.create.error_messages.message13' | translate}}</div>
 										</div>
-									</div>
+									</div> -->
 								</div>
 							</div>
 						</div>
@@ -152,7 +152,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-md-6">
+									<!-- <div class="col-md-6">
 										<div class="form-group">
 											<label for="employee_id">{{'users.create.fields.employment_ID' | translate}}&nbsp;<span class="text-danger">*</span></label>
 											<input type="text" class="form-control" formControlName="emp_id" id="employee_id" placeholder="EMP0001" [ngClass]="{ 'is-invalid': isFormSubmitted && userControl.emp_id.errors }" />
@@ -160,7 +160,7 @@
 												<div *ngIf="userControl.emp_id.errors.required">{{'users.create.error_messages.message15' | translate}}</div>
 											</div>
 										</div>
-									</div>
+									</div> -->
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="username">{{'users.create.fields.username' | translate}}&nbsp;<span class="text-danger">*</span></label>
@@ -176,7 +176,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-md-6">
+									<!-- <div class="col-md-6">
 										<div class="form-group">
 											<label for="primary_manager">{{'users.create.fields.primary_manager' | translate}}</label>
 											<ng-select
@@ -226,7 +226,7 @@
 												formControlName="language">
 											</ng-select>
 										</div>
-									</div>
+									</div> -->
 								</div>
 								<h4 class="form-section"><i class="ft-mail"></i> {{'users.headings.head4' | translate}}</h4>
 								<div class="row">
@@ -248,7 +248,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-md-6">
+									<!-- <div class="col-md-6">
 										<div class="form-group">
 											<label for="skype">{{'users.create.fields.skype' | translate}}</label>
 											<input type="text" class="form-control" placeholder="{{'users.create.placeholders.placeholder8' | translate}}" formControlName="skype" id="skype" />
@@ -268,7 +268,7 @@
 												formControlName="country">
 											</ng-select>
 										</div>
-									</div>
+									</div> -->
 									<div class="col-md-12">
 										<div class="form-group">
 											<label for="address">{{'clients.create.fields.address' | translate}}</label>

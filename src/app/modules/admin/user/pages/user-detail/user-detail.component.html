@@ -45,7 +45,17 @@
 								<span class="btn-primary">{{user.tasks_count}}</span>&nbsp;{{'tasks.title' | translate}}
 							</div>
 						</div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-12 mb-3">
+							<div class="list-inline-buttons">
+								<span class="btn-info">{{user.comment}}</span>&nbsp;{{'users.profile.comments' | translate}}
+							</div>
+						</div>
 						<div class="col-xl-3 col-lg-6 col-md-6 col-12 mb-3">
+							<div class="list-inline-buttons">
+								<span class="btn-warning">{{user.activities.countActivities}}</span>&nbsp;{{'users.profile.activities' | translate}}
+							</div>
+						</div>
+						<!-- <div class="col-xl-3 col-lg-6 col-md-6 col-12 mb-3">
 							<div class="list-inline-buttons">
 								<span class="btn-info">{{user.defects_count}}</span>&nbsp;{{'defects.title' | translate}}
 							</div>
@@ -54,9 +64,9 @@
 							<div class="list-inline-buttons">
 								<span class="btn-success">{{user.incidents_count}}</span>&nbsp;{{'incidents.title' | translate}}
 							</div>
-						</div>
+						</div> -->
 					</div>
-					<div class="row">
+					<!-- <div class="row">
 						<div class="col-xl-3 col-lg-6 col-md-6 col-12 mb-3">
 							<div class="list-inline-buttons">
 								<span class="btn-info">{{user.comment}}</span>&nbsp;{{'users.profile.comments' | translate}}
@@ -77,13 +87,13 @@
 								<span class="btn-primary">{{user.articles.countArticle}}</span>&nbsp;{{'users.profile.articles' | translate}}
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="row" *ngIf="!loginUser.is_client && !user.is_client">
-		<div class="col-xl-3 col-lg-6 col-md-6 col-12">
+		<div class="col-xl-4 col-lg-4 col-md-4 col-12">
 			<div class="card blackberry-gradient">
 				<div class="card-body">
 					<div class="card-block pt-2 pb-2">
@@ -100,7 +110,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-xl-3 col-lg-6 col-md-6 col-12">
+		<div class="col-xl-4 col-lg-4 col-md-4 col-12">
 			<div class="card green-tea-gradient">
 				<div class="card-body">
 					<div class="card-block pt-2 pb-2">
@@ -117,7 +127,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-xl-3 col-lg-6 col-md-6 col-12">
+		<!-- <div class="col-xl-3 col-lg-6 col-md-6 col-12">
 			<div class="card ibiza-sunset-gradient">
 				<div class="card-body">
 					<div class="card-block pt-2 pb-2">
@@ -150,8 +160,8 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="col-xl-3 col-lg-6 col-md-6 col-12">
+		</div> -->
+		<!-- <div class="col-xl-3 col-lg-6 col-md-6 col-12">
 			<div class="card cosmic-fusion-gradient">
 				<div class="card-body">
 					<div class="card-block pt-2 pb-2">
@@ -184,8 +194,8 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="col-xl-3 col-lg-6 col-md-6 col-12">
+		</div> -->
+		<div class="col-xl-4 col-lg-4 col-md-4 col-12">
 			<div class="card green-tea-gradient">
 				<div class="card-body">
 					<div class="card-block pt-2 pb-2">
@@ -219,14 +229,14 @@
 						<ng-template tabHeading><div class="d-flex"><i class="fa fa-tasks"></i><span class="mt-1 ml-1">{{'users.profile.tasks' | translate}}</span></div></ng-template>
 						<app-user-tasks [loginUser]="loginUser" *ngIf="getActiveUserTab('3')"></app-user-tasks>
 					</tab>
-					<tab customClass="text-left" id="4" (selectTab)="setActiveUserTab($event)">
+					<!-- <tab customClass="text-left" id="4" (selectTab)="setActiveUserTab($event)">
 						<ng-template tabHeading><div class="d-flex"><i class="fa fa-bug"></i><span class="mt-1 ml-1">{{'users.profile.defects' | translate}}</span></div></ng-template>
 						<app-user-defects [loginUser]="loginUser" *ngIf="getActiveUserTab('4')"></app-user-defects>
 					</tab>
 					<tab customClass="text-left" id="5" (selectTab)="setActiveUserTab($event)">
 						<ng-template tabHeading><div class="d-flex"><i class="fa fa-ticket"></i><span class="mt-1 ml-1">{{'users.profile.incidents' | translate}}</span></div></ng-template>
 						<app-user-incidents [loginUser]="loginUser" [apiUrl]="apiUrl" *ngIf="getActiveUserTab('5')"></app-user-incidents>
-					</tab>
+					</tab> -->
 					<tab customClass="text-left" id="6" (selectTab)="setActiveUserTab($event)">
 						<ng-template tabHeading><div class="d-flex"><i class="fa fa-history"></i><span class="mt-1 ml-1">{{'users.profile.activities' | translate}}</span></div></ng-template>
 						<app-user-activities [user]="user" [loginUser]="loginUser" *ngIf="getActiveUserTab('6')"></app-user-activities>

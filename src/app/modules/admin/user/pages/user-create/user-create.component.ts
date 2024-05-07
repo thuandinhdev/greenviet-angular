@@ -82,13 +82,13 @@ export class UserCreateComponent implements OnInit {
 		let that = this;
 		this.createUserForm = this.formBuilder.group({
 			user_generated_id: ['USR0001', Validators.required],
-			emp_id: ['', Validators.required],
-			username: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(30), Validators.pattern(/^\S*$/)]],
+			emp_id: [''],
+			username: ['', [ Validators.minLength(3), Validators.maxLength(30), Validators.pattern(/^\S*$/)]],
 			firstname: ['', [Validators.required, Validators.maxLength(20)]],
 			lastname: ['', [Validators.required, Validators.maxLength(20)]],
 			email: ['', [Validators.required, Validators.email]],
-			password: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(30)]],
-			password_confirmation: ['', Validators.required],
+			password: [''],
+			password_confirmation: [''],
 			skype: [''],
 			country: [null],
 			mobile: ['', Validators.pattern(RegExpEnum.phone_regular_expression)],
@@ -230,7 +230,7 @@ export class UserCreateComponent implements OnInit {
 
 	onSubmit() {
 		this.createUserForm.value.department_roles = [];
-		
+
 		this.isFormSubmitted = true;
 		if (this.userControl.assign_permission.value == "cutomize" && this.createUserForm.value.permission.length == 0) {
 			this.isPermissionRequired = true;
@@ -242,13 +242,14 @@ export class UserCreateComponent implements OnInit {
 		}
 
 		if(this.selectedDepartmentRoles) {
-			for(let iRow in this.selectedDepartmentRoles) {
-				if(this.selectedDepartmentRoles[iRow].pivot) {
-					this.createUserForm.value.department_roles.push(this.selectedDepartmentRoles[iRow].pivot);
-				}
-			}
+			// for(let iRow in this.selectedDepartmentRoles) {
+			// 	if(this.selectedDepartmentRoles[iRow].pivot) {
+			// 		this.createUserForm.value.department_roles.push(this.selectedDepartmentRoles[iRow].pivot);
+			// 	}
+			// }
+            this.createUserForm.value.department_roles.push(this.selectedDepartmentRoles.pivot);
 		}
-
+        this.createUserForm.value.emp_id = this.createUserForm.value.user_generated_id;
 		this.userService.create(this.createUserForm.value)
 			.subscribe(
 				data => {

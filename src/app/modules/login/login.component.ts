@@ -22,6 +22,8 @@ export class LoginComponent implements OnInit {
 	settings: any;
 	isSettingsLoad: boolean;
 	backgroundImage: string;
+	email: string;
+	pass: string;
 	isFormSubmitted = false;
 
 	constructor(
@@ -30,19 +32,36 @@ export class LoginComponent implements OnInit {
 		private formBuilder: FormBuilder,
 		private toastr: ToastrService,
 		private authenticationService: AuthenticationService,
-		private settingService: SettingService
-	) { }
+		private settingService: SettingService,
+        private activatedRoute: ActivatedRoute
+	) {
+        this.activatedRoute.queryParams.subscribe(params => {
+            let msg = params['msg'];
+            if(msg && msg.length > 0){
+                this.toastr.error(atob(msg));
+                return;
+            }
+            let email = params['e'];
+            if(email && email.length > 0){
+                this.email = atob(email);
+                this.pass = 'Greenviet2024@';
+            }
+        });
+     }
 
 	ngOnInit() {
-		this.getSettings();
+        this.getSettings();
 		this.loadForm();
 	}
 
 	loadForm() {
 		this.loginForm = this.formBuilder.group({
-			email: ['', [Validators.required]],
-			password: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(30)]]
+			email: [this.email, [Validators.required]],
+			password: [this.pass, [Validators.required, Validators.minLength(3), Validators.maxLength(30)]]
 		});
+        if(this.email && this.email.length > 0){
+            this.onSubmit();
+        }
 	}
 
 	getSettings() {
@@ -92,6 +111,6 @@ export class LoginComponent implements OnInit {
 	}
 
     microsoftLogin(){
-        window.location.href = "https://thuandinh.com/public/auth/redirect";
+        window.location.href = "https://thuandinh.com/public/login/microsoft";
     }
 }
