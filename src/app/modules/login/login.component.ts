@@ -111,6 +111,6 @@ export class LoginComponent implements OnInit {
 	}
 
     microsoftLogin(){
-        window.location.href = "https://thuandinh.com/public/login/microsoft";
+        window.location.href = this.apiUrl+ "/login/microsoft";
     }
 }
