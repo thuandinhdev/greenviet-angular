@@ -74,17 +74,17 @@ export class DefectCreateComponent implements OnInit {
 	loadForms() {
 		let that = this;
 		this.createDefectForm = this.formBuilder.group({
-			project_id: [null, Validators.required],
-			project_version: [null],
+			// project_id: [null, Validators.required],
+			// project_version: [null],
 			defect_name: ['', [Validators.required, Validators.maxLength(255)]],
 			start_date: [null],
 			end_date: [null],
 			status: [1, Validators.required],
-			severity: [2, Validators.required],
-			estimated_hours: ['', Validators.pattern(/^[0-9]+\:[0-5][0-9]$/)],
-			assigned_group_id: [null],
+			// severity: [2, Validators.required],
+			// estimated_hours: ['', Validators.pattern(/^[0-9]+\:[0-5][0-9]$/)],
+			// assigned_group_id: [null],
 			assign_member: [null],
-			defect_type: [1, Validators.required],
+			// defect_type: [1, Validators.required],
 			file: [''],
 			file_extension: [''],
 			attachment: [''],
@@ -236,7 +236,7 @@ export class DefectCreateComponent implements OnInit {
 
 		this.defectService.create(this.createDefectForm.value).subscribe(data => {
 			this.toastr.success(this.translate.instant('defects.messages.create'), this.translate.instant('defects.title'));
-			this.router.navigate(['defects']);
+			this.router.navigate(['project_bidding']);
 		});
 	}
 }

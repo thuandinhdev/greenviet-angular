@@ -9,22 +9,36 @@
 			</div>
 			<div class="card-content pt-1" *ngIf="todos.open.length > 0">
 				<div class="card-body">
+
+
 					<div class="drag-container">
-						<div cdkDropList #pendingList="cdkDropList" [cdkDropListData]="todos.open" [cdkDropListConnectedTo]="[doneList]" class="item-list" (cdkDropListDropped)="drop($event)">
-							<div class="item-box" *ngFor="let item of todos.open" cdkDrag>
+						<div class="item-list" >
+							<div class="item-box" *ngFor="let item of todos.open" >
 								<div class="col-md-12">
 									<div class="row">
-										<div class="col-md-1">
-											<label class="checkbox-container checkbox-container-custom  p-1 mb-1 mt-0 mr-0">
-												<input type="checkbox" class="form-control" name="status" id="status{{item.id}}" (change)="changeStatus(item, 2)" />
-												<span class="checkbox-checkmark"></span>
-											</label>
-										</div>
-										<div class="col-md-8">
-											<inline-edit-textarea [name]="'description'" [fieldValue]="item.description" [elementFor]="'todos.inline_edit.description' | translate" [isRequired]="'true'" (updateValue)="saveTodosDetail(item, 'description', $event);"></inline-edit-textarea>
+										<div class="col-md-4">
+											{{item.description}}
+											<!-- <inline-edit-textarea [name]="'description'" [fieldValue]="item.description" [elementFor]="'todos.inline_edit.description' | translate" [isRequired]="'true'" (updateValue)="saveTodosDetail(item, 'description', $event);"></inline-edit-textarea> -->
 										</div>
 										<div class="col-md-3">
-											<inline-edit-date [name]="'due_date'" [fieldValue]="item.due_date" [elementFor]="'todos.inline_edit.due_date' | translate" [isRequired]="'true'" [datepickerConfigs]="datepickerConfigs" [format]="loginUser.settings.date_format" (updateValue)="saveTodosDetail(item, 'due_date', $event);"></inline-edit-date>
+											{{item.price | number:'1.0-0'}}
+										</div>
+										<div class="col-md-3">
+											{{item.due_date}}
+											<!-- <inline-edit-date [name]="'due_date'" [fieldValue]="item.due_date" [elementFor]="'todos.inline_edit.due_date' | translate" [isRequired]="'true'" [datepickerConfigs]="datepickerConfigs" [format]="loginUser.settings.date_format" (updateValue)="saveTodosDetail(item, 'due_date', $event);"></inline-edit-date> -->
+										</div>
+										<div class="col-md-2 actions-dropdown text-right">
+											<div class="btn-group" dropdown>
+												<button dropdownToggle class="dropdown-toggle btn-action" type="button" id="button-basic-2" aria-controls="dropdown-basic-2"><i class="fa fa-ellipsis-v"></i></button>
+												<ul id="dropdown-basic-2" *dropdownMenu class="dropdown-menu animated fadeIn" role="menu" aria-labelledby="button-basic-2">
+													<li role="menuitem" *ngxPermissionsOnly="['admin', 'super_admin', 'todos_edit']">
+														<a (click)="openTodoEditModal(item)" class="dropdown-item btn btn-edit btn-raised" tooltip="{{'common.edit' | translate}}"><i class="fa fa-pencil-square-o"></i></a>
+													</li>
+													<li role="menuitem" *ngxPermissionsOnly="['admin', 'super_admin', 'todos_delete']">
+														<a  (click)="deleteTodo(item.id)" class="dropdown-item btn btn-delete btn-raised" tooltip="{{'common.delete' | translate}}"><i class="fa fa-trash-o"></i></a>
+													</li>
+												</ul>
+											</div>
 										</div>
 									</div>
 								</div>

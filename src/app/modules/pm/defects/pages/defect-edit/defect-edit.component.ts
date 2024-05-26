@@ -79,7 +79,7 @@ export class DefectEditComponent implements OnInit {
 	loadForms() {
 		// --
 		// Dates
-		this.projectStartDate = new Date(this.defect.project.start_date);
+		// this.projectStartDate = new Date(this.defect.project.start_date);
 
 		if (this.defect.start_date) {
 			this.defect.start_date = new Date(this.defect.start_date);
@@ -91,17 +91,17 @@ export class DefectEditComponent implements OnInit {
 
 		this.editDefectForm = this.formBuilder.group({
 			id: [this.defect.id],
-			project_id: [this.defect.project_id, Validators.required],
-			project_version: [this.defect.project_version],
+			// project_id: [this.defect.project_id, Validators.required],
+			// project_version: [this.defect.project_version],
 			defect_name: [this.defect.defect_name, [Validators.required, Validators.maxLength(255)]],
 			start_date: [this.defect.start_date],
 			end_date: [this.defect.end_date],
 			status: [this.defect.status, Validators.required],
-			severity: [this.defect.severity, Validators.required],
-			estimated_hours: [this.defect.estimated_hours, Validators.pattern(/^[0-9]+\:[0-5][0-9]$/)],
-			assigned_group_id: [this.defect.assigned_group_id],
+			// severity: [this.defect.severity, Validators.required],
+			// estimated_hours: [this.defect.estimated_hours, Validators.pattern(/^[0-9]+\:[0-5][0-9]$/)],
+			// assigned_group_id: [this.defect.assigned_group_id],
 			assign_member: [this.defect.assign_member],
-			defect_type: [this.defect.defect_type, Validators.required],
+			// defect_type: [this.defect.defect_type, Validators.required],
 			file: [this.defect.file],
 			file_extension: [this.defect.file_extension],
 			attachment: [this.defect.attachment],
@@ -204,7 +204,7 @@ export class DefectEditComponent implements OnInit {
 		this.defectService.getById(defectId).subscribe(data => {
 			this.defect = data;
 			this.getCheckPermission(this.defect);
-			this.getProjects();
+			// this.getProjects();
 			this.loadForms();
 			this.getTeams();
 
@@ -267,7 +267,7 @@ export class DefectEditComponent implements OnInit {
 		this.projectVersion = event.project_version.split(",").reverse();
 		// --
 		// Dates
-		this.projectStartDate = new Date(event.start_date);
+		// this.projectStartDate = new Date(event.start_date);
 	}
 
 	startDateChange() {
@@ -304,7 +304,7 @@ export class DefectEditComponent implements OnInit {
 
 		this.defectService.update(this.editDefectForm.value).subscribe(data => {
 			this.toastr.success(this.translate.instant('defects.messages.update'), this.translate.instant('defects.title'));
-			this.router.navigate(['defects']);
+			this.router.navigate(['project_bidding']);
 		});
 	}
 

@@ -100,7 +100,7 @@ export class DefectListComponent implements OnInit {
 			columns: [
 				{
 					'sortable': true,
-					'width': "8%",
+					// 'width': "8%",
 					'target': [0]
 				},
 				{
@@ -109,37 +109,37 @@ export class DefectListComponent implements OnInit {
 				},
 				{
 					'sortable': true,
-					'width': "8%",
+					// 'width': "8%",
 					'target': [2]
 				},
 				{
 					'sortable': true,
-					'width': "8%",
+					// 'width': "8%",
 					'target': [3]
 				},
 				{
 					'sortable': true,
-					'width': "8%",
+					// 'width': "8%",
 					'target': [4]
 				},
 				{
 					'sortable': true,
-					'width': "10%",
+					// 'width': "10%",
 					'target': [5]
 				},
-				{
-					'sortable': true,
-					'width': "10%",
-					'target': [6]
-				},
-				{
-					'sortable': true,
-					'width': "10%",
-					'target': [7]
-				},
+				// {
+				// 	'sortable': true,
+				// 	// 'width': "10%",
+				// 	'target': [6]
+				// },
+				// {
+				// 	'sortable': true,
+				// 	// 'width': "10%",
+				// 	'target': [7]
+				// },
 				{
 					'sortable': false,
-					'target': [8],
+					'target': [6],
 					'width': "5%"
 				}
 			],

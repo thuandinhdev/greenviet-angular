@@ -42,17 +42,17 @@
 									<div class="col">
 										<div class="row">
 											<div class="col card-separator mb-3">
-												<div class="col-lg-12 mb-3">
+												<!-- <div class="col-lg-12 mb-3">
 													<label>{{'defects.create.fields.project_name' | translate}}</label>
 													<div class="detail-inline">{{defect.project.project_name}}</div>
 												</div>
 												<div class="col-lg-12 mb-3">
 													<label>{{'defects.create.fields.project_version' | translate}}</label>
 													<div class="detail-inline">{{defect.project_version}}</div>
-												</div>
+												</div> -->
 												<div class="col-lg-12 mb-3 d-flex justify-content-between">
 													<!-- <div class="row"> -->
-													<div class="">
+													<!-- <div class=""> -->
 														<label>{{'defects.create.fields.status' | translate}}</label>
 														<div class="status-dropdown">
 															<ng-container *ngIf="permission; else elseBlock6">
@@ -73,8 +73,8 @@
 																</ng-container>
 															</ng-template>
 														</div>
-													</div>
-													<div class="">
+													<!-- </div> -->
+													<!-- <div class="">
 														<label>{{'defects.create.fields.severity' | translate}}</label>
 														<div class="status-dropdown">
 															<ng-container *ngIf="permission; else elseBlock5">
@@ -95,7 +95,7 @@
 																</ng-container>
 															</ng-template>
 														</div>
-													</div>
+													</div> -->
 													<!--  </div> -->
 												</div>
 												<div class="col-lg-12 mb-3 d-flex justify-content-between">
@@ -137,7 +137,7 @@
 													<label>{{'defects.create.fields.end_date' | translate}}</label>
 													<div class="detail-inline">{{defect.end_date | dateTimeFormatFilter : loginUser.settings.date_format}}</div>
 												</div>
-												<div class="col-lg-12 mb-3">
+												<!-- <div class="col-lg-12 mb-3">
 													<label>{{'defects.create.fields.estimate_hours' | translate}}</label>
 													<div class="detail-inline">
 														<ng-container *ngIf="permission; else elseBlock7">
@@ -149,8 +149,8 @@
 												<div class="col-lg-12 mb-3">
 													<label>{{'defects.create.fields.actual_hours' | translate}}</label>
 													<div class="detail-inline">{{defect.actual_hours}}</div>
-												</div>
-												<div class="col-lg-12 mb-3">
+												</div> -->
+												<!-- <div class="col-lg-12 mb-3">
 													<label>{{'defects.create.fields.defect_type' | translate}}</label>
 													<div class="detail-inline">
 														<ng-container *ngIf="permission; else elseBlock4">
@@ -162,7 +162,7 @@
 															</ng-container>
 														</ng-template>
 													</div>
-												</div>
+												</div> -->
 												<div class="col-lg-12 mb-3">
 													<label>{{'common.created' | translate}}</label>
 													<div class="detail-inline">{{defect.created_at | dateTimeFormatFilter : loginUser.settings.date_time_format}}</div>
@@ -238,9 +238,9 @@
 										<app-todo-detail [module_id]="3" [module_related_id]="defect.id"></app-todo-detail>
 									</div>
 									<!-- Defect Timesheet -->
-									<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 mb-3 card-separator">
+									<!-- <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 mb-3 card-separator">
 										<app-timesheet-list [module_id]="'3'" [module_related_id]="defect.id" [project_id]="defect.project_id" [loginUser]="loginUser" [apiUrl]="apiUrl"></app-timesheet-list>
-									</div>
+									</div> -->
 									<!-- Tab Design -->
 									<tabset class="nav nav-tabs d-flex justify-content-left details-tabs col-md-12 p-0">
 										<!-- Comments -->

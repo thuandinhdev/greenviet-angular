@@ -63,6 +63,7 @@ export class EditTodoModalComponent implements OnInit {
 
 		this.editTodoForm = this.formBuilder.group({
 			id: [this.todo.id],
+			price: [this.todo.price, [Validators.required,Validators.pattern(/^[0-9]+(\.[0-9]{1,2})?$/)]],
 			description: [this.todo.description, [Validators.required, Validators.minLength(5), Validators.maxLength(255)]],
 			status: [this.todo.status, Validators.required],
 			due_date: [this.todo.due_date],

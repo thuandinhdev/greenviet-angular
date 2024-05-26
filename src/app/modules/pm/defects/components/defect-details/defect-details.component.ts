@@ -45,10 +45,10 @@ export class DefectDetailsComponent implements OnInit, OnDestroy {
 		this.totalMinutes = "00";
 		this.totalSeconds = "00";
 
-		this.getTimeLogs();
+		// this.getTimeLogs();
 		this.timerInterval1 = setInterval(() => {
 			if(this.loginUser) {
-				this.getTimeLogs(false);
+				// this.getTimeLogs(false);
 			}
 		}, 1000);
 	}

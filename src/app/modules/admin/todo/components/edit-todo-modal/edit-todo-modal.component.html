@@ -8,6 +8,16 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="form-group">
+						<label for="price">{{'todos.create.fields.price' | translate}}<span class="text-danger">&nbsp;*</span></label>
+						<input type="text" placeholder="{{'todos.create.placeholders.placeholder4' | translate}}" class="form-control" id="price" formControlName="price" [ngClass]="{ 'is-invalid': isFormSubmitted && todoControl.price.errors }"/>
+						<div *ngIf="isFormSubmitted && todoControl.price.errors" class="invalid-feedback">
+							<div *ngIf="todoControl.price.errors.required">{{'todos.create.error_messages.message6' | translate}}</div>
+							<div *ngIf="todoControl.price.errors.pattern">{{'todos.create.error_messages.message7' | translate}}</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="form-group">
 						<label for="description">{{'todos.create.fields.description' | translate}}<span class="text-danger">&nbsp;*</span></label>
 						<textarea type="text" placeholder="{{'todos.create.placeholders.placeholder1' | translate}}" class="form-control" id="description" formControlName="description" [ngClass]="{ 'is-invalid': isFormSubmitted && todoControl.description.errors }"></textarea>
 						<div *ngIf="isFormSubmitted && todoControl.description.errors" class="invalid-feedback">
@@ -17,7 +27,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-12">
 					<div class="form-group">
 						<label for="due_date">{{'todos.create.fields.due_date' | translate}}</label>
 						<div class="position-relative has-icon-left">
@@ -29,7 +39,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6">
+				<!-- <div class="col-md-6">
 					<div class="form-group" [ngClass]="{ 'is-invalid': isFormSubmitted && todoControl.status.errors }">
 						<label for="status">{{'todos.create.fields.status' | translate}}<span class="text-danger">&nbsp;*</span></label>
 						<ng-select [items]="('todos.status' | translate)"
@@ -45,7 +55,7 @@
 							<div *ngIf="todoControl.status.errors.required">{{'todos.create.error_messages.message4' | translate}}</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>

@@ -16,11 +16,11 @@
 	"Custom Fields": "Custom Fields",
 	"Dashboard": "Dashboard",
 	"Dashboard Settings": "Dashboard Settings",
-	"Defect Assigned": "Defect Assigned",
-	"Defect Attachment": "Defect Attachment",
-	"Defect Comments": "Defect Comments",
-	"Defect Updated": "Defect Updated",
-	"Defects": "Defects",
+	"Defect Assigned": "Project Bidding Assigned",
+	"Defect Attachment": "Project Bidding Attachment",
+	"Defect Comments": "Project Bidding Comments",
+	"Defect Updated": "Project Bidding Updated",
+	"Defects": "Project Bidding",
 	"Departments": "Departments",
 	"Email Notifications": "Email Notifications",
 	"Email Settings": "Email Settings",
@@ -128,7 +128,7 @@
 	},
 	"appointments": {
 		"budges": {
-			"title1": "Booked Slots", 
+			"title1": "Booked Slots",
 			"title2": "Appointment Recurrence"
 		},
 		"columns": {
@@ -184,7 +184,7 @@
 				"placeholder5": "Location",
 				"placeholder6": "Attendees",
 				"placeholder7": "-- Select Status --",
-				"placeholder8": "Search For Month", 
+				"placeholder8": "Search For Month",
 				"placeholder9": "-- Select Provider --",
 				"placeholder10": "Enter Recurring Occurrences"
 			}
@@ -277,8 +277,8 @@
 			"title": "Dashboard"
 		},
 		"defects": {
-			"text": "Defects",
-			"title": "Defects"
+			"text": "Project Bidding",
+			"title": "Project Bidding"
 		},
 		"departments": {
 			"text": "Departments",
@@ -391,6 +391,10 @@
 		"users": {
 			"text": "Users",
 			"title": "Users"
+		},
+        "marketings": {
+			"text": "Marketings",
+			"title": "Marketings"
 		}
 	},
 	"calendar": {
@@ -603,7 +607,7 @@
 			"clients": "There are no any clients.",
 			"custom_fields": "There are no any custom fields.",
 			"database_backups": "There are no any database backups.",
-			"defects": "There are no any defects.",
+			"defects": "There are no any Project Bidding.",
 			"departments": "There are no any departments.",
 			"estimates": "There are no any estimates.",
 			"file_browser": "There are no any folders / files.",
@@ -731,9 +735,9 @@
 			"confirmButtonText": "Yes, delete it !",
 			"text": "You will not be able to recover this ",
 			"text1": "You will not be able to recover this department!. Before delete, make sure that you have deleted all users related to this department.",
-			"text2": "You will not be able to recover this user!. Before delete, make sure that you have remove user from teams, projects, tasks, defects and incidents etc..",
-			"text3": "You will not be able to recover this client!. Before delete, make sure that you have remove client from teams, projects, tasks, defects and incidents etc..",
-			"text4": "You will not be able to recover this project!. Before delete, make sure that you have deleted all tasks, defects and incidents related to this project.",
+			"text2": "You will not be able to recover this user!. Before delete, make sure that you have remove user from teams, projects, tasks",
+			"text3": "You will not be able to recover this client!. Before delete, make sure that you have remove client from teams, projects, tasks",
+			"text4": "You will not be able to recover this project!. Before delete, make sure that you have deleted all tasks to this project.",
 			"title": "Are you sure?"
 		},
 		"switch_to_calendar": "Switch to Calendar",
@@ -804,7 +808,7 @@
 			"assigned": "Assigned",
 			"assigned_group": "Assigned Group",
 			"creator": "Creator",
-			"defect_name": "Defect Name",
+			"defect_name": "Project Bidding Name",
 			"end_date": "End Date",
 			"id": "ID",
 			"project": "Project",
@@ -816,15 +820,15 @@
 		},
 		"create": {
 			"error_messages": {
-				"message1": "Please enter an unique and valid defect name.",
+				"message1": "Please enter an unique and valid Project Bidding name.",
 				"message10": "Drop files here or click to upload.",
 				"message11": "Please select a valid start date.",
 				"message12": "Please select a valid end date.",
 				"message13": "Estimate hours allow only digits, 2 digits after colon(less than 60) without any special characters.",
-				"message2": "Defect name can be max 255 characters long.",
-				"message4": "Please select a valid defect type.",
-				"message5": "Please select a valid defect status.",
-				"message6": "Please select a valid defect severity.",
+				"message2": "Project Bidding name can be max 255 characters long.",
+				"message4": "Please select a valid Project Bidding type.",
+				"message5": "Please select a valid Project Bidding status.",
+				"message6": "Please select a valid Project Bidding severity.",
 				"message8": "Please select a valid project."
 			},
 			"fields": {
@@ -834,9 +838,9 @@
 				"choose_file": "Select File",
 				"completed": "Completed",
 				"created_by": "Created By",
-				"defect_ID": "Defect ID",
-				"defect_name": "Defect Name",
-				"defect_type": "Defect Type",
+				"defect_ID": "Project Bidding ID",
+				"defect_name": "Name",
+				"defect_type": "Type",
 				"description": "Description",
 				"end_date": "End Date",
 				"estimate_hours": "Estimate Hours",
@@ -847,10 +851,10 @@
 				"status": "Status"
 			},
 			"placeholders": {
-				"placeholder1": "Enter Defect Name",
-				"placeholder2": "-- Select Defect Type --",
-				"placeholder3": "-- Select Defect Status --",
-				"placeholder4": "-- Select Defect Severity --",
+				"placeholder1": "Enter Project Bidding Name",
+				"placeholder2": "-- Select Project Bidding Type --",
+				"placeholder3": "-- Select Project Bidding Status --",
+				"placeholder4": "-- Select Project Bidding Severity --",
 				"placeholder5": "-- Select Assigned Group --",
 				"placeholder6": "-- Select Project --",
 				"placeholder7": "-- Select Project Version --",
@@ -861,7 +865,7 @@
 		"defect_types": [
 			{
 				"id": 1,
-				"label": "Defects",
+				"label": "Project Bidding",
 				"value": "1"
 			},
 			{
@@ -875,25 +879,25 @@
 			"title2": "Description"
 		},
 		"headings": {
-			"head1": "Defect Info",
+			"head1": "Project Bidding Info",
 			"head2": "Project Info",
 			"head3": "Upload Files",
 			"head4": "Custom Fields",
 			"head5": "Description"
 		},
 		"inline_edit": {
-			"defect_name": "Defect Name",
-			"defect_type": "Defect Type",
+			"defect_name": "Name",
+			"defect_type": "Type",
 			"description": "Description",
 			"estimate_hours": "Estimate Hours",
 			"notes": "Notes"
 		},
 		"messages": {
-			"create": "Defect created successfully.",
-			"delete": "Defect deleted successfully.",
+			"create": "Project Bidding created successfully.",
+			"delete": "Project Bidding deleted successfully.",
 			"severity": "Severity updated successfully.",
 			"status": "Status changed successfully.",
-			"update": "Defect updated successfully."
+			"update": "Project Bidding updated successfully."
 		},
 		"severities": [
 			{
@@ -959,9 +963,9 @@
 				"label": "Deferred"
 			}
 		],
-		"title": "Defects",
-		"title1": "Create Defect",
-		"title2": "Update Defect",
+		"title": "Project Bidding",
+		"title1": "Create Project Bidding",
+		"title2": "Update Project Bidding",
 		"tooltips": {
 			"attachment": "Attachment"
 		}
@@ -1636,7 +1640,7 @@
 		"budges": {
 			"budges1": "Drag task between list"
 		},
-		"title1": "Defect Kanban",
+		"title1": "Project Bidding Kanban",
 		"title2": "Incident Kanban"
 	},
 	"knowledge_base": {
@@ -2415,6 +2419,7 @@
 				"project_name": "Project Name",
 				"start_date": "Start Date",
 				"status": "Status",
+				"input_cost": "Input Cost",
 				"version": "Version"
 			},
 			"placeholders": {
@@ -2561,7 +2566,7 @@
 	},
 	"reports": {
 		"headings": {
-			"defect_report": "Defect",
+			"defect_report": "Project Bidding",
 			"incident_report": "Incident",
 			"project_report": "Project",
 			"task_report": "Task"
@@ -2676,7 +2681,7 @@
 					"message1": "This enables the cronjob feature, if it is setup correctly.",
 					"message2": "Creates a database backup every 7 days. Requires cronjob to be activated!",
 					"message3": "This setting is for appointment and meeting reminder.",
-					"message4": "This setting is for project, task, defect and incident reminder."
+					"message4": "This setting is for project, task"
 				},
 				"placeholders": {
 					"placeholder1": "Enter Emails"
@@ -2754,7 +2759,7 @@
 			"title4": "Meetings",
 			"title5": "Projects",
 			"title6": "Tasks",
-			"title7": "Defects",
+			"title7": "Project Bidding",
 			"title8": "Incidents",
 			"title9": "Due Invoices"
 		},
@@ -3776,29 +3781,32 @@
 				"message1": "Please enter a valid description.",
 				"message2": "Description can be max 5 characters long.",
 				"message3": "Description can be max 255 characters long.",
-				"message4": "Please select a valid todo status.",
-				"message5": "Please select a valid due date."
+				"message4": "Please select a valid Project Bidding status.",
+				"message5": "Please select a valid due date.",
+				"message6": "Please enter a valid price.",
+				"message7": "Please enter a valid price."
 			},
 			"fields": {
 				"description": "Description",
-				"due_date": "Due Date",
+				"due_date": "Date",
+				"price": "Price",
 				"status": "Status"
 			},
 			"placeholders": {
 				"placeholder1": "Enter Description",
 				"placeholder2": "-- Select Status --",
-				"placeholder3": "Select Due Date"
+				"placeholder3": "Select Date"
 			}
 		},
 		"inline_edit": {
 			"description": "Description",
-			"due_date": "Due Date"
+			"due_date": "Date"
 		},
 		"messages": {
-			"create": "Todo created successfully.",
-			"delete": "Todo deleted successfully.",
+			"create": "Project Bidding created successfully.",
+			"delete": "Project Bidding deleted successfully.",
 			"status": "Status updated successfully.",
-			"update": "Todo updated successfully."
+			"update": "Project Bidding updated successfully."
 		},
 		"status": [
 			{
@@ -3812,7 +3820,7 @@
 				"label": "Completed"
 			}
 		],
-		"title": "ToDo"
+		"title": "Project Bidding"
 	},
 	"users": {
 		"buttons": {
@@ -3975,8 +3983,8 @@
 			"activities": "Activities",
 			"articles": "Articles",
 			"comments": "Comments",
-			"defect_hours": "Defect Hours",
-			"defects": "Defects",
+			"defect_hours": "Project Bidding Hours",
+			"defects": "Project Bidding",
 			"incident_hours": "Incident Hours",
 			"incidents": "Incidents",
 			"leave_hours": "Leave Hours",

@@ -56,7 +56,8 @@ export class CreateTodoModalComponent implements OnInit {
 	loadForms() {
 		this.createTodoForm = this.formBuilder.group({
 			description: [null, [Validators.required, Validators.minLength(5), Validators.maxLength(255)]],
-			due_date: [null],
+			due_date: [null, [Validators.required]],
+			price: [null, [Validators.required,Validators.pattern(/^[0-9]+(\.[0-9]{1,2})?$/)]],
 			module_id: [this.todoParams.module_id],
 			module_related_id: [this.todoParams.module_related_id]
 		});

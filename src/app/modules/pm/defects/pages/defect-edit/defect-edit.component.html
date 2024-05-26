@@ -9,7 +9,9 @@
 					<div class="card-body">
 						<div class="px-3">
 							<div class="form-body">
-								<h4 class="form-section"><i class="fa fa-bug"></i> {{'defects.headings.head1' | translate }}</h4>
+								<h4 class="form-section">
+									<!-- <i class="fa fa-bug"></i>  -->
+									{{'defects.headings.head1' | translate }}</h4>
 								<div class="row">
 									<div class="col-md-12">
 										<div class="form-group">
@@ -45,7 +47,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-md-6">
+									<!-- <div class="col-md-6">
 										<div class="form-group" [ngClass]="{ 'is-invalid': isFormSubmitted && defectControl.defect_type.errors }">
 											<label for="defect_type">{{'defects.create.fields.defect_type' | translate }}&nbsp;<span class="text-danger">*</span></label>
 											<ng-select [searchable]="true"
@@ -61,8 +63,8 @@
 												<div *ngIf="defectControl.defect_type.errors.required">{{'defects.create.error_messages.message3' | translate }}</div>
 											</div>
 										</div>
-									</div>
-									<div class="col-md-6">
+									</div> -->
+									<!-- <div class="col-md-6">
 										<div class="form-group" [ngClass]="{ 'is-invalid': isFormSubmitted && defectControl.severity.errors }">
 											<label for="severity">{{'defects.create.fields.severity' | translate }}&nbsp;<span class="text-danger">*</span></label>
 											<ng-select [searchable]="true"
@@ -78,8 +80,8 @@
 												<div *ngIf="defectControl.severity.errors.required">{{'defects.create.error_messages.message6' | translate }}</div>
 											</div>
 										</div>
-									</div>
-									<div class="col-md-6">
+									</div> -->
+									<!-- <div class="col-md-6">
 										<div class="form-group">
 											<label for="assigned_group_id">{{'defects.create.fields.assigned_group' | translate }}</label>
 											<ng-select [searchable]="true"
@@ -93,7 +95,7 @@
 												(change)="assignGroupChange($event)">
 											</ng-select>
 										</div>
-									</div>
+									</div> -->
 									<div class="col-md-6">
 										<div class="form-group">
 											<label for="assign_member">{{'defects.create.fields.assigned_To' | translate }}</label>
@@ -112,7 +114,7 @@
 											</ng-select>
 										</div>
 									</div>
-									<div class="col-md-6">
+									<!-- <div class="col-md-6">
 										<div class="form-group">
 											<label for="estimated_hours">{{'defects.create.fields.estimate_hours' | translate }}</label>
 											<input type='text' class="form-control" formControlName="estimated_hours" placeholder="00:00" [ngClass]="{ 'is-invalid': isFormSubmitted && defectControl.estimated_hours.errors }">
@@ -120,7 +122,7 @@
 												<div *ngIf="defectControl.estimated_hours.errors.pattern">{{'defects.create.error_messages.message13' | translate }}</div>
 											</div>
 										</div>
-									</div>
+									</div> -->
 									<div class="col-md-6">
 										<div class="form-group" [ngClass]="{ 'is-invalid': isFormSubmitted && defectControl.status.errors }">
 											<label for="status">{{'defects.create.fields.status' | translate }}&nbsp;<span class="text-danger">*</span> </label>
@@ -150,7 +152,7 @@
 					<div class="card-body">
 						<div class="px-3">
 							<div class="form-body">
-								<h4 class="form-section"><i class="ft-zap"></i> {{'defects.headings.head2' | translate }}</h4>
+								<!-- <h4 class="form-section"><i class="ft-zap"></i> {{'defects.headings.head2' | translate }}</h4>
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-group" [ngClass]="{ 'is-invalid': isFormSubmitted && defectControl.project_id.errors }">
@@ -182,7 +184,7 @@
 											</ng-select>
 										</div>
 									</div>
-								</div>
+								</div> -->
 								<h4 class="form-section"><i class="ft-upload"></i> {{'defects.headings.head3' | translate }}</h4>
 								<div class="row">
 									<div class="col-md-12">

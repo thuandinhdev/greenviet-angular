@@ -6,8 +6,8 @@
                 <div class="card-header pl-0 pr-0 border-bottom">
                     <h4 class="main-title mt-2"><span>{{'defects.title' | translate}}</span></h4>
                     <div class="card-buttons">
-                        <a [routerLink]="['/defects/kanban']" class="btn btn-create mb-0" tooltip="{{'common.switch_to_kanban' | translate}}"><i class="fa fa-trello"></i><span>{{'common.kanban' | translate}}</span></a>
-                        <a [routerLink]="['/defects/create']" *ngxPermissionsOnly="['admin', 'super_admin', 'defects_create']" class="btn btn-create mb-0" tooltip="{{'common.create' | translate}}"><i class="fa fa-plus"></i></a>
+                        <!-- <a [routerLink]="['/defects/kanban']" class="btn btn-create mb-0" tooltip="{{'common.switch_to_kanban' | translate}}"><i class="fa fa-trello"></i><span>{{'common.kanban' | translate}}</span></a> -->
+                        <a [routerLink]="['/project_bidding/create']" *ngxPermissionsOnly="['admin', 'super_admin', 'defects_create']" class="btn btn-create mb-0" tooltip="{{'common.create' | translate}}"><i class="fa fa-plus"></i></a>
                     </div>
                 </div>
                 <!-- Card content -->
@@ -78,9 +78,9 @@
                                                 <th>{{'defects.columns.defect_name' | translate}}</th>
                                                 <th>{{'defects.columns.start_date' | translate}}</th>
                                                 <th>{{'defects.columns.end_date' | translate}}</th>
-                                                <th>{{'defects.columns.actual_hours' | translate}}</th>
+                                                <!-- <th>{{'defects.columns.actual_hours' | translate}}</th> -->
                                                 <th>{{'defects.columns.assigned' | translate}}</th>
-                                                <th>{{'defects.columns.severity' | translate}}</th>
+                                                <!-- <th>{{'defects.columns.severity' | translate}}</th> -->
                                                 <th>{{'defects.columns.status' | translate}}</th>
                                                 <th>{{'defects.columns.actions' | translate}}</th>
                                             </tr>
@@ -88,7 +88,7 @@
                                         <tbody *ngIf="defects?.length != 0">
                                             <tr *ngFor="let defect of defects; index as i">
                                                 <td>
-                                                    <a [routerLink]="['/defects/detail', defect.id]" tooltip="{{'common.view' | translate}}">{{defect.generated_id}}</a>
+                                                    <a [routerLink]="['/project_bidding/detail', defect.id]" tooltip="{{'common.view' | translate}}">{{defect.generated_id}}</a>
                                                 </td>
                                                 <td>
                                                     <ng-container *ngIf="getCheckPermission(defect, 'edit'); else elseBlock">
@@ -98,7 +98,7 @@
                                                 </td>
                                                 <td>{{defect.start_date | dateTimeFormatFilter: loginUser.settings.date_format}}</td>
                                                 <td>{{defect.end_date | dateTimeFormatFilter: loginUser.settings.date_format}}</td>
-                                                <td>{{defect.actual_hours}}</td>
+                                                <!-- <td>{{defect.actual_hours}}</td> -->
                                                 <td class="people-lists">
                                                     <ng-container *ngIf="defect.assign_member == 'Unassign' || defect.assign_member == '' || defect.assign_member == null; else elseBlock2;">
                                                         <a href="javascript:void(0);" class="btn btn-profile-danger rounded-circle text-dark" placement="top" tooltip="{{'common.unassigned' | translate}}">
@@ -112,11 +112,11 @@
                                                         </a>
                                                     </ng-template>
                                                 </td>
-                                                <td class="budges-status">
+                                                <!-- <td class="budges-status">
                                                     <ng-container *ngFor="let severity of ('defects.severities' | translate)">
                                                         <span class="{{severity.class}}" *ngIf="severity.id == defect.severity">{{severity.label}}</span>
                                                     </ng-container>
-                                                </td>
+                                                </td> -->
                                                 <td class="status-dropdown">
                                                     <div class="overdue-td">
                                                         <ng-container *ngIf="getCheckPermission(defect, 'edit'); else elseBlock3">
@@ -143,10 +143,10 @@
                                                     <div class="btn-group" dropdown>
                                                         <button dropdownToggle class="dropdown-toggle btn-action" type="button" id="button-basic-1" aria-controls="dropdown-basic-1"><i class="fa fa-ellipsis-v"></i></button>
                                                         <ul id="dropdown-basic-1" *dropdownMenu class="dropdown-menu animated fadeIn" role="menu" aria-labelledby="button-basic-1">
-                                                            <li role="menuitem" *ngIf="getCheckPermission(defect, 'edit')">
-                                                                <a [routerLink]="['/defects/edit', defect.id]" class="dropdown-item btn btn-edit btn-raised" tooltip="{{'common.edit' | translate}}"><i class="fa fa-pencil-square-o"></i></a>
+                                                            <li role="menuitem" >
+                                                                <a [routerLink]="['/project_bidding/edit', defect.id]" class="dropdown-item btn btn-edit btn-raised" tooltip="{{'common.edit' | translate}}"><i class="fa fa-pencil-square-o"></i></a>
                                                             </li>
-                                                            <li role="menuitem" *ngIf="getCheckPermission(defect, 'delete')">
+                                                            <li role="menuitem" >
                                                                 <a (click)="deleteDefect(defect.id)" class="dropdown-item btn btn-delete btn-raised" tooltip="{{'common.delete' | translate}}"><i class="fa fa-trash-o"></i></a>
                                                             </li>
                                                         </ul>
@@ -156,7 +156,7 @@
                                         </tbody>
                                         <tfoot *ngIf="defects?.length == 0" class="tfoot_dt">
                                             <tr>
-                                                <td colspan="9" class="no-data-available text-center">{{'common.datatable.sEmptyTable' | translate}}</td>
+                                                <td colspan="7" class="no-data-available text-center">{{'common.datatable.sEmptyTable' | translate}}</td>
                                             </tr>
                                         </tfoot>
                                     </table>

@@ -16,11 +16,11 @@
 	"Custom Fields": "Trường tùy chỉnh",
 	"Dashboard": "bảng điều khiển",
 	"Dashboard Settings": "Cài đặt trang tổng quan",
-	"Defect Assigned": "Chỉ định khiếm khuyết",
-	"Defect Attachment": "Tệp đính kèm khiếm khuyết",
-	"Defect Comments": "Nhận xét khiếm khuyết",
-	"Defect Updated": "Đã cập nhật khiếm khuyết",
-	"Defects": "Khiếm khuyết",
+	"Defect Assigned": "Chỉ định dấu thầu dự án",
+	"Defect Attachment": "Tệp đính kèm  dự án đấu thầu",
+	"Defect Comments": "Nhận xét  dự án đấu thầu",
+	"Defect Updated": "Đã cập nhật  dự án đấu thầu",
+	"Defects": " dự án đấu thầu",
 	"Departments": "Các phòng ban",
 	"Email Notifications": "thông báo thư",
 	"Email Settings": "Cài đặt email",
@@ -262,8 +262,8 @@
 			"title": "bảng điều khiển"
 		},
 		"defects": {
-			"text": "Khiếm khuyết",
-			"title": "Khiếm khuyết"
+			"text": "Dự án đấu thầu",
+			"title": "Dự án đấu thầu"
 		},
 		"departments": {
 			"text": "Các phòng ban",
@@ -370,8 +370,8 @@
 			"title": "Thời gian biểu"
 		},
 		"todos": {
-			"text": "Todos",
-			"title": "Todos"
+			"text": "Đấu thầu",
+			"title": "Đấu thầu"
 		},
 		"users": {
 			"text": "người dùng",
@@ -543,10 +543,10 @@
 		"calendar_view": "Xem lịch",
 		"cancel": "Hủy bỏ",
 		"change": "Thay đổi",
-		"close": "Gần",
+		"close": "Đóng",
 		"comment": "Bình luận",
 		"copy": "Sao chép",
-		"create": "Tạo nên",
+		"create": "Tạo mới",
 		"create_comment": "Tạo bình luận",
 		"created": "tạo",
 		"datatable": {
@@ -568,7 +568,7 @@
 			"sInfoThousands": ",",
 			"sLengthMenu": "Hiển thị _MENU_",
 			"sLoadingRecords": "Tải...",
-			"sProcessing": "Chế biến...",
+			"sProcessing": "Tải...",
 			"sSearchPlaceholder": "Tìm kiếm ...",
 			"sZeroRecords": "không tìm thấy kết quả"
 		},
@@ -588,7 +588,7 @@
 			"clients": "Không có bất kỳ khách hàng nào.",
 			"custom_fields": "Không có bất kỳ trường tùy chỉnh nào.",
 			"database_backups": "Không có bất kỳ bản sao lưu cơ sở dữ liệu nào.",
-			"defects": "Không có bất kỳ khiếm khuyết nào.",
+			"defects": "Không có bất kỳ dự án đấu thầu nào.",
 			"departments": "Không có bất kỳ phòng ban nào.",
 			"estimates": "Không có bất kỳ ước tính nào.",
 			"file_browser": "Không có bất kỳ thư mục / tệp nào.",
@@ -674,7 +674,7 @@
 			"active": "Hoạt động",
 			"all": "Tất cả các",
 			"approved": "Tán thành",
-			"assigned": "Giao",
+			"assigned": "Chỉ định",
 			"cancel": "Hủy bỏ",
 			"canceled": "Đã hủy",
 			"closed": "Đã đóng",
@@ -786,10 +786,10 @@
 		"columns": {
 			"actions": "Hành động",
 			"actual_hours": "Giờ",
-			"assigned": "Giao",
+			"assigned": "Chỉ định",
 			"assigned_group": "Nhóm được chỉ định",
 			"creator": "Người sáng tạo",
-			"defect_name": "Tên khiếm khuyết",
+			"defect_name": "Tên dự án đấu thầu",
 			"end_date": "Ngày cuối",
 			"id": "ID",
 			"project": "Dự án",
@@ -820,8 +820,8 @@
 				"choose_file": "Chọn tập tin",
 				"completed": "Đã hoàn thành",
 				"created_by": "Được tạo bởi",
-				"defect_ID": "ID khiếm khuyết",
-				"defect_name": "Tên khiếm khuyết",
+				"defect_ID": "ID  dự án đấu thầu",
+				"defect_name": "Tên  dự án đấu thầu",
 				"defect_type": "Loại khuyết tật",
 				"description": "Mô tả",
 				"end_date": "Ngày cuối",
@@ -833,10 +833,10 @@
 				"status": "Trạng thái"
 			},
 			"placeholders": {
-				"placeholder1": "Nhập tên khiếm khuyết",
-				"placeholder2": "- Chọn loại khiếm khuyết -",
+				"placeholder1": "Nhập tên dự án đấu thầu ",
+				"placeholder2": "- Chọn loại  dự án đấu thầu -",
 				"placeholder3": "- Chọn Trạng thái Lỗi -",
-				"placeholder4": "- Chọn mức độ nghiêm trọng của khiếm khuyết -",
+				"placeholder4": "- Chọn mức độ nghiêm trọng của  dự án đấu thầu -",
 				"placeholder5": "- Chọn Nhóm được Chỉ định -",
 				"placeholder6": "- Chọn Dự án -",
 				"placeholder7": "- Chọn phiên bản dự án -",
@@ -847,7 +847,7 @@
 		"defect_types": [
 			{
 				"id": 1,
-				"label": "Khiếm khuyết",
+				"label": " dự án đấu thầu",
 				"value": "1"
 			},
 			{
@@ -861,22 +861,22 @@
 			"title2": "Mô tả"
 		},
 		"headings": {
-			"head1": "Thông tin khiếm khuyết",
+			"head1": "Thông tin  dự án đấu thầu",
 			"head2": "Thông tin dự án",
 			"head3": "Tải lên tệp",
 			"head4": "Trường tùy chỉnh",
 			"head5": "Mô tả"
 		},
 		"inline_edit": {
-			"defect_name": "Tên khiếm khuyết",
+			"defect_name": "Tên  dự án đấu thầu",
 			"defect_type": "Loại khuyết tật",
 			"description": "Mô tả",
 			"estimate_hours": "Ước tính giờ",
 			"notes": "Ghi chú"
 		},
 		"messages": {
-			"create": "Đã tạo thành công khiếm khuyết.",
-			"delete": "Đã xóa thành công khiếm khuyết.",
+			"create": "Đã tạo thành công  dự án đấu thầu.",
+			"delete": "Đã xóa thành công  dự án đấu thầu.",
 			"severity": "Đã cập nhật thành công mức độ nghiêm trọng.",
 			"status": "Trạng thái đã thay đổi thành công.",
 			"update": "Đã cập nhật lỗi thành công."
@@ -945,8 +945,8 @@
 				"label": "Hoãn lại"
 			}
 		],
-		"title": "Khiếm khuyết",
-		"title1": "Tạo khiếm khuyết",
+		"title": " dự án đấu thầu",
+		"title1": "Tạo  dự án đấu thầu",
 		"title2": "Cập nhật lỗi",
 		"tooltips": {
 			"attachment": "Tập tin đính kèm"
@@ -1263,7 +1263,7 @@
 		"columns": {
 			"actions": "Hành động",
 			"actual_hours": "Giờ",
-			"assigned": "Giao",
+			"assigned": "Chỉ định",
 			"assigned_group": "Nhóm được chỉ định",
 			"client": "Khách hàng",
 			"client_company": "Công ty khách hàng",
@@ -1609,7 +1609,7 @@
 		"budges": {
 			"budges1": "Kéo công việc giữa danh sách"
 		},
-		"title1": "Khiếm khuyết Kanban",
+		"title1": " dự án đấu thầu Kanban",
 		"title2": "Kanban Sự cố"
 	},
 	"knowledge_base": {
@@ -2530,7 +2530,7 @@
 	},
 	"reports": {
 		"headings": {
-			"defect_report": "Khiếm khuyết",
+			"defect_report": " dự án đấu thầu",
 			"incident_report": "Biến cố",
 			"project_report": "Dự án",
 			"task_report": "Bài tập"
@@ -2724,7 +2724,7 @@
 			"title4": "Cuộc họp",
 			"title5": "Dự án",
 			"title6": "Nhiệm vụ",
-			"title7": "Khiếm khuyết",
+			"title7": " dự án đấu thầu",
 			"title8": "Sự cố",
 			"title9": "Hóa đơn đến hạn"
 		},
@@ -3183,7 +3183,7 @@
 			"actions": "Hành động",
 			"actual_end": "Kết thúc thực tế",
 			"actual_start": "Bắt đầu thực tế",
-			"assigned": "Giao",
+			"assigned": "Chỉ định",
 			"creator": "Người sáng tạo",
 			"end": "Kết thúc",
 			"end_date": "Ngày cuối",
@@ -3745,28 +3745,32 @@
 				"message2": "Mô tả có thể dài tối đa 5 ký tự.",
 				"message3": "Mô tả có thể dài tối đa 255 ký tự.",
 				"message4": "Vui lòng chọn trạng thái việc làm hợp lệ.",
-				"message5": "Vui lòng chọn một ngày đến hạn hợp lệ."
+				"message5": "Vui lòng chọn một ngày hợp lệ.",
+				"message6": "Vui lòng nhập giá đấu thầu.",
+				"message7": "Vui lòng nhập giá đấu thầu hợp lệ."
 			},
 			"fields": {
 				"description": "Mô tả",
-				"due_date": "NGÀY ĐÁO HẠN",
-				"status": "Trạng thái"
+				"due_date": "Ngày đấu thầu",
+				"status": "Trạng thái",
+				"price": "Giá thầu"
 			},
 			"placeholders": {
 				"placeholder1": "Nhập mô tả",
 				"placeholder2": "- Chọn Trạng thái -",
-				"placeholder3": "Chọn ngày đến hạn"
+				"placeholder3": "Chọn ngày đấu thầu",
+				"placeholder4": "Nhập giá thầu"
 			}
 		},
 		"inline_edit": {
 			"description": "Mô tả",
-			"due_date": "NGÀY ĐÁO HẠN"
+			"due_date": "Ngày đấu thầu"
 		},
 		"messages": {
-			"create": "Todo đã được tạo thành công.",
-			"delete": "Đã xóa Todo thành công.",
+			"create": "Thông tin đấu thầu đã được tạo thành công.",
+			"delete": "Đã xóa Thông tin đấu thầu thành công.",
 			"status": "Đã cập nhật trạng thái thành công.",
-			"update": "Todo đã cập nhật thành công."
+			"update": "Thông tin đấu thầu đã cập nhật thành công."
 		},
 		"status": [
 			{
@@ -3780,7 +3784,7 @@
 				"label": "Đã hoàn thành"
 			}
 		],
-		"title": "Làm"
+		"title": "Đấu thầu"
 	},
 	"users": {
 		"buttons": {
@@ -3942,8 +3946,8 @@
 			"activities": "Hoạt động",
 			"articles": "Bài viết",
 			"comments": "Bình luận",
-			"defect_hours": "Giờ khiếm khuyết",
-			"defects": "Khiếm khuyết",
+			"defect_hours": "Giờ  dự án đấu thầu",
+			"defects": " dự án đấu thầu",
 			"incident_hours": "Giờ sự cố",
 			"incidents": "Sự cố",
 			"leave_hours": "Rời khỏi giờ",
